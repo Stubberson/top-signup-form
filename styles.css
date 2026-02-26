@@ -1,15 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 * {
+    font-family: "Atkinson Hyperlegible", sans-serif;
     padding: 0;
     margin: 0;
 }
 
-body {
-    display: flex;
+a {
+    color: inherit;
 }
 
-img {
-    width: 200px;
-    height: auto;
+:root {
+    --window-height: 100vh;
+}
+
+body {
+    display: flex;
+    font-size: 16px;
 }
 
 .information,
@@ -18,4 +25,45 @@ img {
 .submit {
     flex-direction: column;
     margin-top: 24px;
+}
+
+.visual {
+    position: relative;
+    height: var(--window-height);
+}
+
+.visual .logo {
+    position: absolute;
+    bottom: 72px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+
+    font-weight: 600;
+    font-size: 3em;
+    opacity: 0.8;
+}
+
+/* I converted a Google icon into inline svg and its viewbox is silly */
+.visual .logo svg {
+    width: 1.5em;
+    height: 1.5em;
+    fill: black;
+    box-shadow: inset 3px 3px 2px black, 3px 3px 2px rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+}
+
+.visual .sauna-photo {
+    height: 100%;
+}
+
+.visual p {
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%); /* Shift back half of the width */
+
+    color: rgba(46, 46, 46, 0.6);
 }
