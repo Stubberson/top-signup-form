@@ -6,10 +6,6 @@
     margin: 0;
 }
 
-a {
-    color: inherit;
-}
-
 :root {
     --window-height: 100vh;
 }
@@ -19,12 +15,8 @@ body {
     font-size: 16px;
 }
 
-.information,
-.hero,
-.inputs,
-.submit {
-    flex-direction: column;
-    margin-top: 24px;
+a {
+    color: inherit;
 }
 
 .visual {
@@ -46,7 +38,6 @@ body {
     opacity: 0.8;
 }
 
-/* I converted a Google icon into inline svg and its viewbox is silly */
 .visual .logo svg {
     width: 1.5em;
     height: 1.5em;
@@ -63,7 +54,24 @@ body {
     position: absolute;
     bottom: 12px;
     left: 50%;
-    transform: translateX(-50%); /* Shift back half of the width */
+    transform: translateX(-50%); /* Shift back half of the width to center */
 
     color: rgba(46, 46, 46, 0.6);
+}
+
+.information {
+    flex-direction: column;
+    align-content: center;
+    flex-grow: 1;
+}
+
+.hero,
+.inputs,
+.submit {
+    flex-direction: column;
+    padding: 48px;
+}
+
+.inputs {
+    background-color: aqua;
 }
