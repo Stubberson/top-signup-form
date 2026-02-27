@@ -12,16 +12,19 @@
 
 body {
     display: flex;
-    font-size: 16px;
 }
 
 a {
     color: inherit;
 }
 
+/* VISUAL SIDE */
+
 .visual {
     position: relative;
     height: var(--window-height);
+
+    font-size: 16px;
 }
 
 .visual .logo {
@@ -59,19 +62,89 @@ a {
     color: rgba(46, 46, 46, 0.6);
 }
 
+/* INFO SIDE */
+
 .information {
     flex-direction: column;
     align-content: center;
     flex-grow: 1;
+
+    font-size: 16px;
+    background-color: #fdfdfd;
+}
+
+.hero {
+    font-size: 24px;
 }
 
 .hero,
-.inputs,
-.submit {
+section {
+    display: flex;
     flex-direction: column;
     padding: 48px;
 }
 
 .inputs {
-    background-color: aqua;
+    gap: 1em;
+
+    background-color: white;
+    box-shadow: 0px 5px 12px #d1d3d7;
+}
+
+.inputs h1 {
+    font-size: 24px;
+}
+
+fieldset {
+    border-style: none;
+    display: flex;
+    gap: 2em;
+}
+
+fieldset p {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: small;
+    color: rgb(48, 48, 48);
+}
+
+input {
+  width: 250px;
+  height: 25px;
+
+  padding-left: 6px;
+  box-sizing: border-box;
+
+  border-radius: 0.2em;
+  border: solid 1px #cbcdd0;
+}
+
+input:focus {
+    border-style: none;
+    outline-style: outset;
+
+    box-shadow: 2px 2px 4px #cbcdd0;
+}
+
+button {
+    width: 125px;
+    height: 35px;
+    margin-bottom: 1em;
+
+    color: white;
+    background-color: #3882f6;
+    border-style: none;
+    border-radius: 0.5em;
+    font-size: 1em;
+    font-weight: 700;
+
+    box-shadow: 2px 2px 2px #204b8f59;
+}
+
+button:hover {
+    background-color: #3374de;
+    cursor: pointer;
 }
